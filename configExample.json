@@ -1,0 +1,16 @@
+{
+	"token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"ownerids": [
+		"xxxxxxxxxxxxxxxxxx",
+		"xxxxxxxxxxxxxxxxxx",
+		"xxxxxxxxxxxxxxxxxx"
+	],
+	"botid": "xxxxxxxxxxxxxxxxxx",
+	"blocked": {
+
+	},
+	"errorChannel": "xxxxxxxxxxxxxxxxxx",
+	"invite": "https://discord.com/api/oauth2/authorize?client_id=xxxxxxxxxxxxxxxxxx&permissions=xxxxxxxxxxxx&scope=bot%20applications.commands",
+	"firstToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "TBAToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}

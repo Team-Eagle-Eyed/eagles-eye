@@ -1,0 +1,54 @@
+{
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/rest": "^0.4.1",
+    "@discordjs/voice": "^0.16.0",
+    "ansi-regex": "^6.0.1",
+    "bing-translate-api": "^2.2.1",
+    "body-parser": "^1.20.0",
+    "discord-api-types": "^0.33.0",
+    "discord-inv": "^1.1.0",
+    "discord.js": "^14.0.3",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.4.0",
+    "ffmpeg-static": "^5.0.0",
+    "fs": "^0.0.1-security",
+    "got": "^12.0.4",
+    "libsodium-wrappers": "^0.7.13",
+    "minecraft-server-util": "^5.2.9",
+    "node": "^17.7.2",
+    "node-fetch": "^2.6.7",
+    "opusscript": "^0.0.8",
+    "path": "^0.12.7",
+    "prism-media": "^1.3.5",
+    "remove-from-array": "^0.1.0",
+    "request": "^2.88.2",
+    "sodium-native": "^4.0.4",
+    "tall": "^5.0.0",
+    "topgg-autoposter": "^2.0.1",
+    "valid-url": "^1.0.9",
+    "ytdl": "^1.4.1",
+    "ytdl-core": "^4.11.5",
+    "ytdl-core-discord": "^1.3.1"
+  },
+  "name": "harold",
+  "description": "The Harold discord bot.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheHaroldBot/Harold.git"
+  },
+  "author": "John Gooden <johnnyg3587@gmail.com>",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/TheHaroldBot/Harold/issues"
+  },
+  "homepage": "https://github.com/TheHaroldBot/Harold#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  }
+}

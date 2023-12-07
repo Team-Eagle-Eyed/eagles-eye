@@ -1,0 +1,163 @@
+{
+	// Place your Harold workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	
+	"Command File Template": {
+		"scope": "javascript",
+		"prefix": "commandFile",
+		"description": "Template for a new command file.",
+		"body": [
+			"const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');",
+			"",
+			"module.exports = {",
+			"\tname: '$1', // command name",
+			"\tdescription: '$2', // command description",
+			"\targs: ${3:true}, // needs arguments?",
+			"\tusage: '$4', // usage instructions w/o command name and prefix",
+			"\tcooldown: ${5:3}, // cooldown in seconds, defaults to 3",
+			"\tmyPermissions: [${6:PermissionFlagsBits.something}], // permissions required for bot",
+			"\townerOnly: ${7:false}, // need to be the owner? delete line if no",
+			"\tdisabled: ${8:false}, // command disabled to all? delete line if no",
+			"\tdata: new SlashCommandBuilder()",
+			"\t\t.setName('$1')",
+			"\t\t.setDescription('$2')",
+			"\t\t.setDefaultMemberPermissions(${9:PermissionFlagsBits.something}) // Set permissions required, separate multiple with bitwise OR (|)",
+			"\t\t.setDMPermission(${10:true}), // allow running in a DM",
+			"",
+			"\texecute(interaction) { // inside here command stuff",
+			"\t\t$0",	
+			"\t},",
+			"};"
+		]
+	},
+	"Event File Template": {
+		"scope": "javascript",
+		"prefix": "eventFile",
+		"description": "Template for a new event file.",
+		"body": [
+			"const Discord = require('discord.js');",
+			"",
+			"module.exports = {",
+			"\tname: '$1',",
+			"\tonce: ${2:true},",
+			"\tasync execute() {",
+			"\t\t$0",
+			"\t},",
+			"};"
+
+		]
+	},
+	"Error Template": {
+		"scope": "javascript",
+		"prefix": "errorTemplate",
+		"description": "Template for a new error",
+		"body": [
+			"const returnError = { message: ${1:error.message}, stack: ${2:error.stack}, code: ${3:500}, report: ${4|false,true|}, myMessage: '${5:Uh-oh, something went wrong!}' };",
+			"throw returnError;"
+		]
+	},
+	"Button File Template": {
+		"scope": "javascript",
+		"prefix": "buttonFile",
+		"description": "Template for a new button file.",
+		"body": [
+			"const { Discord } = require('discord.js');",
+			"",
+			"module.exports = {",
+			"\tcustomId: '$1',",
+			"\tpermissions: [$2],",
+			"\tmyPermissions: [$3],",
+			"\tasync execute(interaction) {",
+			"\t\t$0",
+			"\t},",
+			"};"
+		]
+	},
+	"Button Template": {
+		"scope": "javascript",
+		"prefix": "buttonTemplate",
+		"description": "Template for a new button",
+		"body": [
+			"new ButtonBuilder()",
+			"\t.setLabel('$2')",
+			"\t.setStyle(ButtonStyle.${3|Primary,Secondary,Success,Danger,Link|})",
+			"\t.setCustomId('$4') // remove if style is LINK",
+			"\t.setURL('$5'), // remove if style is not LINK",
+		]
+	},
+	"Select Menu File Template": {
+		"scope": "javascript",
+		"prefix": ["selectMenuFileTemplate"],
+		"description": "Template for a new select menu file.",
+		"body": [
+			"const Discord = require('discord.js');",
+			"",
+			"module.exports = {",
+			"\tcustomId: '$1',",
+			"\tpermissions: [$2],",
+			"\tmyPermissions: [$3],",
+			"\tasync execute(interaction) {",
+			"\t\t$0",
+			"\t},",
+			"};"
+		]
+	},
+	"Select Menu Template": {
+		"scope": "javascript",
+		"prefix": ["selectMenuTemplate", "messageSelectMenuTemplate"],
+		"description": "Template for a new select menu",
+		"body": [
+			"new SelectMenuBuilder()",
+			"\t.setCustomId('$2')",
+			"\t.setPlaceholder('$3')",
+			"\t.addOptions([",
+			"\t\t{",
+			"\t\t\tlabel: '$4',",
+			"\t\t\tvalue: '$5',",
+			"\t\t\tdescription: '$6',",
+			"\t\t},",
+			"\t]),"
+		]
+	},
+	"Message Action Row Template": {
+		"scope": "javascript",
+		"prefix": ["messageActionRowTemplate", "actionRowTemplate"],
+		"description": "Template for a new message action row",
+		"body": [
+			"const $1 = new ActionRowBuilder()",
+			"\t.addComponents(",
+			"\t\t$0",
+			"\t);"
+		]
+	},
+	"Auto Complete Template": {
+		"scope": "javascript",
+		"prefix": "autoCompleteTemplate",
+		"description": "Template for a new auto complete",
+		"body": [
+			"autoComplete: async (interaction) => {",
+			"\tconst currentValue = interaction.options.getFocused();",
+			"\tconst toRespond = [];",
+			"\ttoRespond.push({",
+			"\t\tname: 'Option 1',",
+			"\t\tvalue: 'option1',",
+			"\t});",
+			"\treturn toRespond;",
+			"}"
+		]
+	}
+}
